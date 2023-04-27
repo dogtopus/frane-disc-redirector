@@ -1,0 +1,17 @@
+{
+  "name": "frane-disc-redirector",
+  "version": "1.0.0",
+  "description": "Autonomous Frida agent for the game Frane: Lost memory of Angel, that disables game disc check and redirects access of game disc assets to the same location where the game executable is installed into.",
+  "private": true,
+  "main": "agent/index.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "frida-compile agent/index.ts -o _agent.js -c",
+    "watch": "frida-compile agent/index.ts -o _agent.js -w"
+  },
+  "devDependencies": {
+    "@types/frida-gum": "^18.1.0",
+    "@types/node": "^18.0.6",
+    "frida-compile": "^15.0.8"
+  }
+}
