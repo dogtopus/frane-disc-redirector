@@ -37,7 +37,7 @@ if (new_game_disc_prefix !== null && new_game_disc_prefix.length < GAME_DISC_PRE
             const proc = GetCurrentProcess();
             TerminateProcess(proc, exit_val);
         }
-    })
+    });
 } else {
     if (new_game_disc_prefix === null) {
         console.log('Game exe name mismatch. Refusing to patch.');
